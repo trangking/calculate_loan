@@ -6,6 +6,7 @@ import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "./Component/Form";
+import TestDropDrown from "./Component/TestDropDrown"
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/Form",
     element: <Form />,
+  },
+  {
+    path: "/TestDropDrown",
+    element: <TestDropDrown/>,
   },
 ]);
 

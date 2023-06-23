@@ -1,0 +1,123 @@
+.boxDropDrown {
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.p_header {
+  position: absolute;
+  width: 471px;
+  height: 132px;
+  left: calc(50% - 471px / 2 - 0.5px);
+  top: 109px;
+
+  font-family: "Niramit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 66px;
+  /* or 138% */
+
+  text-align: center;
+
+  color: #115725;
+}
+
+.P_pricelist {
+  position: absolute;
+  width: 210px;
+  height: 31px;
+  left: calc(50% - 210px / 2 - 17px);
+  top: 307px;
+
+  font-family: "Niramit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  /* or 103% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #e2ebe5;
+}
+
+.frompricelist {
+  position: absolute;
+  width: 1128px;
+  height: 586px;
+  left: 77px;
+  top: 278px;
+}
+.frompricelistcolor {
+  position: absolute;
+  width: 1128px;
+  height: 586px;
+  left: calc(50% - 1128px / 2 + 1px);
+  top: 278px;
+
+  background: #e2ebe5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.headerpricelist {
+  position: absolute;
+  width: 1120px;
+  height: 59px;
+  left: 80px;
+  top: 293px;
+
+  background: rgba(42, 105, 60, 0.88);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+}
+.p_pricelist {
+  position: absolute;
+  width: 283px;
+  height: 31px;
+  left: calc(50% - 283px / 2 - 370.5px);
+  top: 319px;
+
+  font-family: "Niramit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  /* or 103% */
+
+  display: flex;
+  align-items: center;
+
+  color: #115725;
+}
+.ant-input-affix-wrapper-disabled {
+  margin-left: 10px;
+  background-color: #80a98b;
+}
+.ant-input-affix-wrapper-disabled2 {
+  margin-left: 12px;
+  background-color: #80a98b;
+}
+.ant-input-suffix {
+  color: white;
+}
+
+.ant-input[disabled] {
+  text-align: center;
+  color: white;
+}
+
+.ant-input {
+  text-align: center;
+  color: black;
+}
+.ant-input-affix-wrapper {
+  margin-left: 10px;
+}

@@ -1,90 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./NavBar";
 import "./form.css";
-import { Select } from "antd";
+//import { Select, Input } from "antd";
 const PriceList = () => {
   return (
     <div className="form_body">
       <h1>Price List</h1>
-      <DataPriceList/>
+      <TestpageMookupData1 />
     </div>
   );
 };
 
-const DataPriceList = () => {
+const TestpageMookupData1 = () => {
+  const PriveCar = [
+    {
+      name: "Honda",
+      model: [
+        {
+          name: "City",
+        },
+        {
+          name: "Civic",
+        },
+      ],
+    },
+    {
+      name: "toyota",
+      model: [
+        {
+          name: "Yaris",
+        },
+        {
+          name: "Cross",
+        },
+      ],
+    },
+    {
+      name: "Bmw",
+      model: [
+        {
+          name: "X7",
+        },
+        {
+          name: "X8",
+        },
+      ],
+    },
+  ];
+  const [pricecar, setpricecar] = useState(null);
+  const [models, setmodels] = useState(null);
+  const [model, setmodel] = useState([]);
+
+  function handcar(event) {
+    setpricecar(event.target.value);
+    setmodel(PriveCar.find((e) => e.name === event.target.value).model);
+    console.log(pricecar);
+  }
+  function handmodel(event) {
+    setmodels(event.target.value);
+    console.log(models);
+    
+  }
   return (
     <div>
-      <div className="v1">
-      <section>
-        <label className="textprice_1">ประเภท</label>
-        <Select
-          showSearch
-          style={{ width: 200 }}
-          placeholder="เลือกประเภทรถ"
-          optionFilterProp="children"
-          filterOption={(input, option) =>
-            (option?.label ?? "").includes(input)
-          }
-          filterSort={(optionA, optionB) =>
-            (optionA?.label ?? "")
-              .toLowerCase()
-              .localeCompare((optionB?.label ?? "").toLowerCase())
-          }
-          options={[
-            {
-              value: "1",
-              label: "รถเก๋ง",
-            },
-            {
-              value: "2",
-              label: "รถกะบะ",
-            },
-            {
-              value: "3",
-              label: "รถตู้",
-            },
-            {
-              value: "4",
-              label: "รถHUV",
-            },
-          ]}
-        />
-        </section>
-        <section>
-        <label className="textprice_2">ยี่ห้อ</label>
-        <Select
-          showSearch
-          style={{ width: 200 }}
-          placeholder="เลือกประเภทรถ"
-          optionFilterProp="children"
-          filterOption={(input, option) =>
-            (option?.label ?? "").includes(input)
-          }
-          filterSort={(optionA, optionB) =>
-            (optionA?.label ?? "")
-              .toLowerCase()
-              .localeCompare((optionB?.label ?? "").toLowerCase())
-          }
-          options={[
-            {
-              value: "1",
-              label: "Honda",
-            },
-            {
-              value: "2",
-              label: "Toyota",
-            },
-            {
-              value: "3",
-              label: "BYD",
-            },
-            {
-              value: "4",
-              label: "Rolls-Royce",
-            },
-          ]}
-        />
-        </section>
+      <div>
+        เลือกยี่ห้อ
+        <select onChange={handcar}>
+          <option>เลือกยี่ห้อ</option>
+          {PriveCar.map((e) => (
+            <option value={e.name}>{e.name}</option>
+          ))}
+        </select>
+        <div>
+          เลือกรุ่น
+          <select status="error" onChange={handmodel}>
+            <option>เลือกรุ่น</option>
+            {model.map((models) => (
+              <option value={models.name}>{models.name}</option>
+            ))}
+          </select>
+        </div>
+      
+        <button>ลองนะครับ</button>
+      
+        
       </div>
     </div>
   );

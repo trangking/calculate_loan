@@ -19,13 +19,13 @@ const Home = () => {
           
           <button 
             size="large" className="buttonHP"
-            onClick={() => navigate("/Form")}
+            onClick={() => navigate("/TestDropDrown")}
           >
             Hire Purchase(HP)
           </button>
           <button
             className="buttonP-loan"
-            onClick={() => navigate("/Form")}
+            onClick={() => navigate("/TestDropDrown")}
           >
             P-Loan
           </button>
@@ -42,6 +42,7 @@ function App() {
     <div>
       <Navbar />
       <Home />
+      
     </div>
   );
 }
